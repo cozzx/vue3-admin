@@ -7,4 +7,6 @@ import 'virtual:svg-icons-register';
 
 import 'uno.css'
 
-createApp(App).mount('#app')
+import { createPinia } from "pinia";
+
+createApp(App).use(createPinia()).mount('#app')

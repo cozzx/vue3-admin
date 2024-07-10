@@ -7,6 +7,9 @@ const count = ref(0)
 
 import variables from "@/styles/variables.module.scss";
 console.log(variables.bgColor)
+
+import { useCounterStore } from "@/store/counter";
+const counterStore = useCounterStore();
 </script>
 
 <template>
@@ -50,6 +53,15 @@ console.log(variables.bgColor)
   <div style="width:100px;height:100px" :style="{ 'background-color': variables.bgColor }" />
 
   <p class="text-red">red</p>
+
+  <el-card  class="text-left text-white border-white border-1 border-solid mt-10 bg-[#242424]" >
+    <template #header> 子组件 HelloWorld.vue</template>
+    <el-form>
+      <el-form-item label="数字："> {{ counterStore.count }}</el-form-item>
+      <el-form-item label="加倍："> {{ counterStore.double }}</el-form-item>
+    </el-form>
+  </el-card>
+
 </template>
 
 <style scoped>
