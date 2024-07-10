@@ -13,6 +13,8 @@ import IconsResolver from "unplugin-icons/resolver";
 
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
+import UnoCSS from "unocss/vite";
+
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   return {
@@ -35,6 +37,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
     },
     plugins: [
       vue(),
+      UnoCSS({ /* options */ }),
       // 自动导入参考： https://github.com/sxzz/element-plus-best-practices/blob/main/vite.config.ts
       AutoImport({
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等

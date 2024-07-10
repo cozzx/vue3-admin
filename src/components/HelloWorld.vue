@@ -48,6 +48,8 @@ console.log(variables.bgColor)
   <div class="box" />
   <!-- TypeScript 使用 SCSS 全局变量，在 variables.module.scss 中定义-->
   <div style="width:100px;height:100px" :style="{ 'background-color': variables.bgColor }" />
+
+  <p class="text-red">red</p>
 </template>
 
 <style scoped>
