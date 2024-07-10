@@ -7,5 +7,7 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  // 自动导入TS类型声明文件引入
+  "include": ["src/**/*.d.ts"]
 }
