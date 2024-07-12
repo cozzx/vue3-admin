@@ -9,4 +9,6 @@ import 'uno.css'
 
 import { createPinia } from "pinia";
 
-createApp(App).use(createPinia()).mount('#app')
+import router from '@/router'
+
+createApp(App).use(createPinia()).use(router).mount('#app')

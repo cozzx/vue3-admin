@@ -66,6 +66,9 @@ const handleLoginSubmit = () => {
     <el-button type="danger"><i-ep-WarnTriangleFilled />Danger</el-button>
     <el-button type="info"><svg-icon icon-class="system"/>SVG 本地图标</el-button>
     <el-button type="info" @click.prevent="handleLoginSubmit">登陆</el-button>
+    <router-link to="/login">
+      <el-button type="info">登陆页面</el-button>
+    </router-link>
   </div>
   <!-- scss 中使用变量，在 variables.scss 中定义-->
   <div class="box" />

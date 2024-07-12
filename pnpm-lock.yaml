@@ -20,6 +20,9 @@ importers:
       vue:
         specifier: ^3.4.29
         version: 3.4.31(typescript@5.5.3)
+      vue-router:
+        specifier: '4'
+        version: 4.4.0(vue@3.4.31(typescript@5.5.3))
     devDependencies:
       '@iconify-json/ep':
         specifier: ^1.1.15
@@ -2147,6 +2150,11 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
+
+  vue-router@4.4.0:
+    resolution: {integrity: sha512-HB+t2p611aIZraV2aPSRNXf0Z/oLZFrlygJm+sZbdJaW6lcFqEDQwnzUBXn+DApw+/QzDU/I9TeWx9izEjTmsA==}
+    peerDependencies:
+      vue: ^3.2.0
 
   vue-template-compiler@2.7.16:
     resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
@@ -4550,6 +4558,11 @@ snapshots:
 
   vue-demi@0.14.8(vue@3.4.31(typescript@5.5.3)):
     dependencies:
+      vue: 3.4.31(typescript@5.5.3)
+
+  vue-router@4.4.0(vue@3.4.31(typescript@5.5.3)):
+    dependencies:
+      '@vue/devtools-api': 6.6.3
       vue: 3.4.31(typescript@5.5.3)
 
   vue-template-compiler@2.7.16:

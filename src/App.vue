@@ -17,6 +17,7 @@ const counterStore = useCounterStore();
   <h1 class="text-3xl">vue3-element-admin-父组件</h1>
   <el-button type="primary" @click="counterStore.increment">count++</el-button>
   <HelloWorld msg="Vite + Vue" />
+  <router-view />
 </template>
 
 <style scoped>
