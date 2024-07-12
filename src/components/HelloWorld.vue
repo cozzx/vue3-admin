@@ -10,6 +10,25 @@ console.log(variables.bgColor)
 
 import { useCounterStore } from "@/store/counter";
 const counterStore = useCounterStore();
+
+/** 登录表单提交 */
+import { useUserStore } from "@/store";
+import AuthAPI, { LoginData } from "@/api/auth";
+const userStore = useUserStore();
+const loginData = ref<LoginData>({
+  username: "admin",
+  password: "123456",
+} as LoginData);
+const handleLoginSubmit = () => {
+  userStore
+    .login(loginData.value)
+    .then(() => {
+    })
+    .catch(() => {
+    })
+    .finally(() => {
+    });
+}
 </script>
 
 <template>
@@ -46,6 +65,7 @@ const counterStore = useCounterStore();
     <el-button type="warning"><i-ep-WarningFilled />Warning</el-button>
     <el-button type="danger"><i-ep-WarnTriangleFilled />Danger</el-button>
     <el-button type="info"><svg-icon icon-class="system"/>SVG 本地图标</el-button>
+    <el-button type="info" @click.prevent="handleLoginSubmit">登陆</el-button>
   </div>
   <!-- scss 中使用变量，在 variables.scss 中定义-->
   <div class="box" />
