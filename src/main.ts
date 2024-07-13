@@ -11,4 +11,10 @@ import { createPinia } from "pinia";
 
 import router from '@/router'
 
-createApp(App).use(createPinia()).use(router).mount('#app')
+import i18n from '@/lang/index';
+
+createApp(App)
+    .use(createPinia())
+    .use(router)
+    .use(i18n)
+    .mount('#app')
