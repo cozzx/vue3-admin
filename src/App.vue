@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
 
 import { useCounterStore } from "@/store/counter";
 const counterStore = useCounterStore();
 
-import { ElConfigProvider } from 'element-plus';
+import { ElConfigProvider } from "element-plus";
 import { LanguageEnum } from "@/enums/LanguageEnum";
 </script>
 
@@ -21,7 +21,7 @@ import { LanguageEnum } from "@/enums/LanguageEnum";
   <el-button type="primary" @click="counterStore.increment">count++</el-button>
   <HelloWorld msg="Vite + Vue" />
 
-  <el-config-provider :locale="LanguageEnum.zhCN" >
+  <el-config-provider :locale="LanguageEnum.zhCN">
     <router-view />
   </el-config-provider>
 </template>
@@ -30,12 +30,14 @@ import { LanguageEnum } from "@/enums/LanguageEnum";
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
   transition: filter 300ms;
+  will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

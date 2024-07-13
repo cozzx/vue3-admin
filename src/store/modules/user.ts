@@ -5,7 +5,6 @@ import { store } from "@/store";
 import { LoginData } from "@/api/auth";
 
 export const useUserStore = defineStore("user", () => {
-
   /**
    * 登录
    *
@@ -13,13 +12,13 @@ export const useUserStore = defineStore("user", () => {
    * @returns
    */
   function login(loginData: LoginData) {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>(() => {
       AuthAPI.login(loginData)
         .then(() => {
-          console.log('then')
+          console.log("then");
         })
         .catch(() => {
-          console.log('error')
+          console.log("error");
         });
     });
   }

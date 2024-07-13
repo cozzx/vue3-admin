@@ -11,7 +11,7 @@ export const useCounterStore = defineStore("counter", () => {
   // function函数 → actions
   const increment = () => {
     count.value++;
-  }
+  };
 
   return { count, double, increment };
-})
+});

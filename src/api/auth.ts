@@ -10,7 +10,7 @@ class AuthAPI {
     formData.append("password", data.password);
     formData.append("captchaKey", data.captchaKey);
     formData.append("captchaCode", data.captchaCode);
-    return request<any, LoginResult>({
+    return request({
       url: `${AUTH_BASE_URL}/login`,
       method: "post",
       data: formData,
@@ -30,7 +30,7 @@ class AuthAPI {
 
   /** 获取验证码 接口*/
   static getCaptcha() {
-    return request<any, CaptchaResult>({
+    return request<CaptchaResult>({
       url: `${AUTH_BASE_URL}/captcha`,
       method: "get",
     });

@@ -1,7 +1,7 @@
 import { UserConfig, ConfigEnv, loadEnv, defineConfig } from "vite";
-import vue from '@vitejs/plugin-vue'
+import vue from "@vitejs/plugin-vue";
 
-import { resolve } from 'path'
+import { resolve } from "path";
 const pathSrc = resolve(__dirname, "src");
 
 import AutoImport from "unplugin-auto-import/vite";
@@ -16,12 +16,12 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import UnoCSS from "unocss/vite";
 
 // https://vitejs.dev/config/
-export default defineConfig(({mode}: ConfigEnv): UserConfig => {
+export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd());
   return {
     resolve: {
       alias: {
-        '@': pathSrc
+        "@": pathSrc,
       },
     },
     css: {
@@ -56,7 +56,9 @@ export default defineConfig(({mode}: ConfigEnv): UserConfig => {
     },
     plugins: [
       vue(),
-      UnoCSS({ /* options */ }),
+      UnoCSS({
+        /* options */
+      }),
       // 自动导入参考： https://github.com/sxzz/element-plus-best-practices/blob/main/vite.config.ts
       AutoImport({
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
@@ -107,5 +109,5 @@ export default defineConfig(({mode}: ConfigEnv): UserConfig => {
         symbolId: "icon-[dir]-[name]",
       }),
     ],
-  }
-})
+  };
+});
